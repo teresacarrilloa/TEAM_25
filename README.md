@@ -1,5 +1,5 @@
 
-_En el presente compilado de postworks se encuentra un compendio de los aprendizajes adquiridos durante las sesiones correspondientes al "Módulo: Programación y estadística con R del programa Data Analysis BEDU - Santander", impartido por el Team BEDU:_
+_En el presente compilado de postworks se encuentra un compendio de los aprendizajes adquiridos durante las sesiones correspondientes al "Módulo: Programación y estadística con R del programa Data Science BEDU - Santander", impartido por el Team BEDU:_
  * Experto: Erick Coronado Juárez
  * Teaching Assistant: Uriel Rodríguez y Dalai Aguirre
  * Learning Experience Executive: Dara Moreno Novoa
@@ -9,7 +9,7 @@ _En el presente compilado de postworks se encuentra un compendio de los aprendiz
 
  * **Ana Paula Machargo Gordillo**
  * **Angelica Guadalupe Rivera Varela**
- * **Jose Estefanía Estrada Aguilar**
+ * **Jose Estefania Estrada Aguilar**
  * **Martha Teresa Carrillo Acosta**
 
 ## Construido con 🛠️
