@@ -10,6 +10,28 @@ La probabilidad (conjunta) de que el equipo que juega en casa anote x goles y el
 #Realiza lo siguiente:
 # 1. Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo de casa.
 
+
+BL <- read.csv('https://www.football-data.co.uk/mmz4281/1920/SP1.csv')
+BL_df <- BL[, c('FTHG', 'FTAG')]
+Partidos <- length(BL$FTHG)
+
+#Tabla de frecuencias equipo que juega en casa
+FTHG <- BL_df %>%group_by(FTHG) %>% summarise(frequency = n())
+FTHG_marginal = FTHG$frequency / Partidos
+FTHG_df <- data.frame(FTHG$FTHG, FTHG$frequency, FTHG_marginal)
+
+#Tabla de frecuencias equipo visitante
+FTAG <- BL_df %>%group_by(FTAG) %>% summarise(frequency = n())
+FTAG_marginal = FTAG$frequency / Partidos
+FTAG_df <- data.frame(FTAG$FTAG, FTAG$frequency, FTAG_marginal)
+
+#Tabla de frecuencias conjuntas
+library(tidyr)
+Tabla <- unite(BL_df, Goles,c(1:2),  sep = " ", remove = TRUE)
+Tabla_conjunta <- Tabla %>%group_by(Goles) %>% summarise(frequency = n())
+Prob_conj <- Tabla_conjunta$frequency / Partidos
+Tabla_conjunta <- data.frame(Tabla_conjunta, Prob_conj)
+
 library(ggplot2)
 
 
